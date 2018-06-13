@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.applications.kshitij.projectgst.TotalActivity">
+
+
+    <LinearLayout
+        android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#099">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total :    Rs "
+            android:textColor="#fff"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:id="@+id/txtamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textColor="#fff"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_layout"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="#099"
+            android:textColor="#fff"
+            android:onClick="AddMoreItems"
+            android:text="+     ADD ITEM    +" />
+
+        <ImageView
+            android:id="@+id/Submt"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:alpha="0.6"
+            android:onClick="SubmitFinalList"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tick"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/Finallistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_below="@+id/Lin"/>
+
+
+
+</RelativeLayout>
